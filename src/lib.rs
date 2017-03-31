@@ -22,7 +22,6 @@ enum StreebogHasherDigest {
 }
 
 struct StreebogHasherCtx {
-    //iv: [u8; 64],
     hash: [u8; 64],
     N: [u8; 64],
     sigma: [u8; 64],
@@ -38,8 +37,8 @@ pub trait StreebogHasher {
     fn update(&mut self, data_chunk: &[u8]);
     /// Completes a round of hashing.
     fn finish(&mut self);
-    /// Returns result of hashing as Vec<u8> (result is big-endian, i.e. bytes placed in the
-    /// same order as String representation).
+    /// Returns result of hashing as Box<[u8]> (result is big-endian, i.e. bytes arranged in the
+    /// same order as in String representation).
     ///
     /// If hasher is not finished (i.e. finish is not called), it returns empty array.
     fn get_result(&self) -> Box<[u8]>;
