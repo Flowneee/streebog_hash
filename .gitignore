@@ -1,0 +1,7 @@
+.projectile
+target/
+msg2struct
+c_bindings/
+*.bk*
+*.lock
+*.old
