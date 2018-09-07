@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["StreebogHasher256","An implementation of Streebog algorithm with digest size 256 bit."],["StreebogHasher512","An implementation of Streebog algorithm with digest size 512 bit."]],"trait":[["StreebogHasher","A trait which represents the ability to hash an arbitrary stream of bytes with Streebog algorithm."]]});
